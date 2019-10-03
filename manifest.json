@@ -16,7 +16,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://github.com/*/*/wiki"],
+      "matches": ["*://github.com/*/*/wiki/*"],
       "js": ["/content_scripts/cs.js"]
     }
   ],
