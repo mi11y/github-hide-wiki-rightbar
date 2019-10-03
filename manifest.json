@@ -1,0 +1,29 @@
+{
+
+  "manifest_version": 2,
+  "name": "Hide-bar",
+  "version": "1.0",
+
+  "description": "Hides that stupid wiki sidebar on github wikipages",
+  "homepage_url": "https://github.com/jorgemanzo/github-hide-wiki-rightbary",
+  "icons": {
+    "16": "icons/main.svg"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://github.com/*/*/wiki"],
+      "js": ["/content_scripts/cs.js"]
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/main.svg",
+    "default_title": "Hide-bar Plugin",
+    "default_popup": "popup/main.html"
+  }
+}
