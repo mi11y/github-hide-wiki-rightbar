@@ -15,6 +15,10 @@
 	"storage"
   ],
 
+  "background": {
+    "scripts": ["background/bg.js"]
+  },
+
   "content_scripts": [
     {
       "matches": ["*://github.com/*/*/wiki/*","*://github.com/*/*/wiki"],

@@ -52,10 +52,6 @@ let listenForClicks = () => {
 	})
 }
 const main = async () => {
-	let currentWidth = await getWidthFromStorage()
-	console.log("current width: ", currentWidth)
-	await notifyContentScript({sentBy: "setWidth", width: currentWidth})
-
 	// Put in an event listener for the button on the plugin page.
 	// the content script is loaded automatically under the right url
 	document.getElementById("enableCheck").checked = true;
