@@ -21,13 +21,10 @@
 		if ('width' in message) {
 			document.getElementsByClassName("markdown-body")[0].style.paddingLeft = message.width + "px"
 			document.getElementsByClassName("markdown-body")[0].style.paddingRight = message.width + "px"
-			console.log("Previous width set")
 		}
 	}
 
 	window.hasRun = true;
-
-	console.log("Content script ran")
 
 	// Hide the right bar
 	document.getElementById("wiki-rightbar").style.display = "none"

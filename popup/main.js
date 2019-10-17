@@ -14,12 +14,10 @@ const decrementWidth = (currentWidth) => {
 }
 const getWidthFromStorage = async () => {
 	const storage = await browser.storage.local.get('width')
-	console.log("In getWidthFromStorage: ", storage)
 	let width = 100
 	if('width' in storage) {
 		width = storage.width
 	}
-	console.log("In getWidthFromStorage: ", width)
 	return width
 }
 const setWidthInStorage = async (newWidth) => {
@@ -27,7 +25,6 @@ const setWidthInStorage = async (newWidth) => {
 		width: newWidth
 	}
 	await browser.storage.local.set(storage)
-	console.log("Updated local storage")
 }
 let listenForClicks = () => {
 	document.getElementById("enableCheck").addEventListener("click", async (e) => {
